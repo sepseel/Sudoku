@@ -1,5 +1,99 @@
+* {
+	font-family: 'Nanum Gothic', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.container {
+	margin: auto;
+	width: 45%;
+	background: white;
+}
+
+h1 {
+	padding: 10px;
+}
+
+.controls {
+	padding: 10px 40px;
+	display: inline-block;
+	font-weight: bold;
+}
+
+.button {
+	background-color: gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-size: 16px;
+	border-radius: 4px;
+}
+
 .rooster {
+    font-size: 150%;
+    font-weight: bold;
+    padding: 15px 0px;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 20px 20px 30px 20px 20px 30px 20px 20px 20px;
-    grid-template-rows:    20px 20px 30px 20px 20px 30px 20px 20px 20px;
+    grid-template-columns: 30px 30px 40px 30px 30px 40px 30px 30px 30px;
+    grid-template-rows:    30px 30px 40px 30px 30px 40px 30px 30px 30px;
+}
+
+#help {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+
+	.container {
+		width: 80%;
+	}
+
+	.button {
+		padding: 10px 25px;
+	}
+
+	.color {
+		padding: 9px 30px;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.container {
+		width: 100%;
+	}
+
+	.controls{
+		width: 75%;
+	}
+
+	.circle {
+		width: 15%;
+		padding-bottom: 15%;
+	}
+
+	.button {
+		margin: 5px 0px;
+		width: 100%;
+	}
+
+	.color {
+		margin: 10px 0px;
+    }
+    
+    #help {
+        padding: 5px 10px;
+    }
 }

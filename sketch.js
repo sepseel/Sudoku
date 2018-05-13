@@ -4,6 +4,11 @@ var grid = false;
 var url = "http://0.0.0.0:8080/cgi-bin/Sudokucgi.cgi?";
 
 
+help = function() {
+    let help = "Hoe spelen: \nkies een cijfer uit het menu, dan kan op de plaats geklikt worden waar het ingevuld moet zijn. \nAls het een ongeldige zet is word niets ingevuld. \n\nDe knop 'New game' herstart het spel"
+    alert(help);
+}
+
 
 update = function(state) {
 
