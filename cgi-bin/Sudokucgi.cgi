@@ -22,11 +22,11 @@ standaardbord = (
     '---68931-'
 )
 
-def new_game(spelbord=standaardbord):
+def new_game():
     """
     start een niew spel met de opgegeven grootte
     """
-    game = Sudoku(spelbord)
+    game = Sudoku()
     print(json.dumps(game.staat()))
 
 def do_move(status, waarde, coord):

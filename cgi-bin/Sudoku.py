@@ -1,13 +1,17 @@
+import json
+import urllib.request
+
 class Sudoku:
-    
-    def __init__(self, spelbord):
+    def __init__(self, dificulty='easy', spelbord=''):
         """
         constructor functie voor een spel sudoku, 
         baseert het spelbord op een string van 81 karakters,
         '-' voor een lege plek of cijfers.
         """
-        if len(spelbord) != 81:
+        if len(spelbord) != 81 and len(spelbord) != 0:
             raise AssertionError('ongeldig spelbord')
+        elif len(spelbord) == 0:
+            spelbord = get_rand_bord(dificulty)
         self.maak_bord(spelbord)
         
     def __str__(self):
@@ -133,3 +137,15 @@ def grenzen(coord):
     rij = coord[0] - coord[0] % 3
     kol = coord[1] - coord[1] % 3
     return rij, kol
+
+def get_rand_bord(dificulty='easy'):
+    spelbord = ''
+    with urllib.request.urlopen('https://sugoku.herokuapp.com/board?difficulty=' + dificulty) as response:
+        bord = response.read()
+    for rij in json.loads(bord)['board']:
+        for cijfer in rij:
+            if cijfer == 0:
+                spelbord += '-'
+            else:
+                spelbord += str(cijfer)
+    return spelbord

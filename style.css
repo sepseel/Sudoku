@@ -8,7 +8,6 @@
 .container {
 	margin: auto;
 	width: 45%;
-	background: white;
 }
 
 h1 {
@@ -16,7 +15,7 @@ h1 {
 }
 
 .controls {
-	padding: 10px 40px;
+	padding: 12px 40px;
 	display: inline-block;
 	font-weight: bold;
 }
@@ -33,19 +32,43 @@ h1 {
 	border-radius: 4px;
 }
 
+#nummer {
+    padding: 14px 30px;
+}
+
 .rooster {
     font-size: 150%;
     font-weight: bold;
     padding: 15px 0px;
     justify-content: center;
     display: grid;
-    grid-template-columns: 30px 30px 40px 30px 30px 40px 30px 30px 30px;
-    grid-template-rows:    30px 30px 40px 30px 30px 40px 30px 30px 30px;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+    grid-template-rows:    30px 30px 30px 30px 30px 30px 30px 30px 30px;
+}
+
+.tegel {
+    text-align: center;
+}
+
+.tegel:nth-child(9n-5) {
+    border-right: 2px solid black;
+}
+
+.tegel:nth-child(9n-2) {
+    border-right: 2px solid black;
+}
+
+.tegel:nth-child(n+20):nth-child(-n+28) {
+    border-bottom: 2px solid black;
+}
+
+.tegel:nth-child(n+47):nth-child(-n+55) {
+    border-bottom: 2px solid black;
 }
 
 #help {
-    background-color: gray;
     border: none;
+    background-color: gray;
     color: white;
     padding: 5px 10px;
     text-align: center;
@@ -64,7 +87,7 @@ h1 {
 		padding: 10px 25px;
 	}
 
-	.color {
+	#nummer {
 		padding: 9px 30px;
 	}
 }
@@ -79,17 +102,13 @@ h1 {
 		width: 75%;
 	}
 
-	.circle {
-		width: 15%;
-		padding-bottom: 15%;
-	}
-
+	
 	.button {
 		margin: 5px 0px;
 		width: 100%;
 	}
 
-	.color {
+	#nummer {
 		margin: 10px 0px;
     }
     

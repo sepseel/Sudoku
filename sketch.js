@@ -4,8 +4,17 @@ var grid = false;
 var url = "http://0.0.0.0:8080/cgi-bin/Sudokucgi.cgi?";
 
 
+set_borders = function() {
+    for (let i = 0; i < 81; i++) {
+        if (i % 9 == 2 || i % 9 == 5) {
+            $('#' + i).css('border-right', '2px solid black') 
+        }
+    }
+}
+
+
 help = function() {
-    let help = "Hoe spelen: \nkies een cijfer uit het menu, dan kan op de plaats geklikt worden waar het ingevuld moet zijn. \nAls het een ongeldige zet is word niets ingevuld. \n\nDe knop 'New game' herstart het spel"
+    let help = "Hoe spelen: \nkies een cijfer uit het menu, dan kan op de plaats geklikt worden waar het ingevuld moet zijn. \nAls het een ongeldige zet is word niets ingevuld. \n\nDe knop 'New game' start een willekeurig nieuw spel"
     alert(help);
 }
 
